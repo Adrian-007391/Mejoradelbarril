@@ -2,38 +2,34 @@ import React from "react";
 
 import {Container, Info, Cost, CostItem, Data, Button} from "./styles";
 
-function Item() {
+import { BsSearch } from "react-icons/bs";
+import {Cerveza} from "../../Data/cerveza";
+
+
+function Item({cerveza}: {cerveza: Cerveza}) {
+
+    const medidas:string[] = ["5 oz", "11oz", "16oz", "tarro"];
+
     return(
         <Container>
             <Data>
-                <h6>Title</h6>
+                <h6>{cerveza.nombre}</h6>
                 <Info>
-                <p>Estilo</p>
-                <p>ABV</p>
-                <p>IBU</p>
+                <p>{cerveza.estilo}</p>
+                <p>ABV {cerveza.ABV}%</p>
+                <p>IBU {cerveza.IBU}%</p>
                 </Info>
                 <Cost>
-                    <CostItem>
-                        <p>5 oz</p>
-                        <span>$30</span>
-                    </CostItem>
-                    <CostItem>
-                        <p>5 oz</p>
-                        <span>$30</span>
-                    </CostItem>
-                    <CostItem>
-                        <p>5 oz</p>
-                        <span>$30</span>
-                    </CostItem>
-                    <CostItem>
-                        <p>5 oz</p>
-                        <span>$30</span>
-                    </CostItem>
+                    {cerveza.precios.map((el:number, i:number)=>
+                        <CostItem>
+                            <p>{medidas[i]}</p>
+                            <span>${el}</span>
+                        </CostItem>)}
                 </Cost>
             </Data>
             <Button>
-                <img/>
-                <p>Conoce más</p>
+                <BsSearch size="40%" style={{width: "100%",}}/>
+                <p>Más</p>
             </Button>
         </Container>
     )

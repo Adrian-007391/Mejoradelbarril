@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     margin: 10px auto;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     h6{
@@ -50,14 +50,19 @@ export const Data = styled.div`
     flex-direction: column;
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
     border-radius: 50%;
+    border: #fff;
     margin-left: 50px;
-    width: 85px;
-    height: 85px;
     background-color: #017A5A;
+    width: 70px;
+    height: 70px;
     color: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+    justify-content: center;
     font-size: 15px;
+    
+    p{
+        margin: 5px auto;
+    }
 `;

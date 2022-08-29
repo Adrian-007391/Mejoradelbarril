@@ -24,7 +24,7 @@ function Buttontype(props: Prop) {
   `;
   return (
     <Wrapper>
-      {props.icon} <br></br> <Text>{props.text}</Text>
+      {props.icon} <Text>{props.text}</Text>
     </Wrapper>
   );
 }

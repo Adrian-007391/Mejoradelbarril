@@ -20,6 +20,7 @@ export const Info = styled.div`
     p{
         margin:20px 0;
         font-size: 18px;
+        font-weight: 500;
     }
 `;
 

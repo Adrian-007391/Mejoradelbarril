@@ -8,7 +8,7 @@ import {Cerveza} from "../../Data/cerveza";
 
 function Item({cerveza}: {cerveza: Cerveza}) {
 
-    const medidas:string[] = ["5 oz", "11oz", "16oz", "tarro"];
+    const medidas:string[] = ["5 oz", "11oz", "16oz", "Tarro"];
 
     return(
         <Container>

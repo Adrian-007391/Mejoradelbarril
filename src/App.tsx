@@ -10,6 +10,7 @@ function App() {
   `;
   return (
     <Router>
+      <Title>hello</Title>
       <Routes>
         <Route element={<Startpage />} path="/" />
       </Routes>
